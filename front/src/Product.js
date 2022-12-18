@@ -1,5 +1,6 @@
-import React,{useEffect, useState} from 'react'
+import React,{useEffect, useState,Fragment} from 'react'
 import { useParams,Link,useLocation } from 'react-router-dom';
+import AddBtn from './buttons/AddBtn';
 
 function Product() {
 
@@ -54,8 +55,10 @@ function Product() {
     
     var gendiv = prokey.map((pkey,k) => <div>{pkey} : {info[k] }</div>)
   return (
-    <div>{gendiv}</div>
-    
+    <Fragment>
+      <div>{gendiv}</div>
+      <AddBtn pro ={data} item={item} />
+    </Fragment>
   )
 }
 

@@ -5,10 +5,7 @@ export const context = createContext();
 function ContextProvider({children}) {
     const [citem,setCitem] = useState('');
     const [cname, setCname] = useState("");
-    const [tdp,setTdp] = useState(0);
-    const [price, setPrice] = useState(0);
-    const [savedl, setSavedl] = useState([]);
-    const[savlist, setSavlist] = useState([,,,,,,,]);
+    
     const [computerParts , setComputerParts] = useState({
       cpu:-1,
       motherboard:-1,
