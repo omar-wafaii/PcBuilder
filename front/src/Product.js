@@ -1,56 +1,46 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import { useParams,Link,useLocation } from 'react-router-dom';
 
 function Product() {
+
   const location = useLocation();
-  let data = 0; 
-  switch(location.state.item){
-    case "Processor":
-      data = require("./usedata/cpu.json");
-      break;
-    case "Motherboard":
-      data = require("./usedata/motherboard.json");
-      break;
-    case "CPU Cooler":
-      data = require("./usedata/cpu-cooler.json");
-      break;
-    case "Ram":
-      data = require("./usedata/memory.json");
-      break;
-    case "Storage":
-      data = require("./usedata/internal-hard-drive.json");
-      break;
-    case "Graphics Card":
-      data = require("./usedata/video-card.json");
-      break;
-    case "Power Supply":
-      data = require("./usedata/power-supply.json");
-      break;
-    case "Case":
-      data = require("./usedata/case.json");
-      break;
-  };
-    const {prod} = useParams();
+  const [pronum,setPronum] = useState(-1);
+  const [item,setItem] = useState("");
+  const [data, setData] = useState([]);
+  setPronum(location.state.pronum);
+  setItem(location.state.item);
+     
+    const getPcPart = async () => {
+      try {
+        const response = await fetch(`http://localhost:5000/product/${item}/${pronum}`);
+        const jsonData = await response.json();
+        setData(jsonData);
+      }catch (err) {
+        console.error(err.message);
+      }
+    };
+
+    useEffect(()=> {
+      getPcPart();
+    },[]);
+
     let prokey = [];
     let info = [];
     let j =0;
-    for(var key in data[location.state.pronum]){
-      if(data[location.state.pronum].hasOwnProperty(key)){
-        info[j]=data[location.state.pronum][key];
+    for(var key in data){
+      if(data.hasOwnProperty(key)){
+        info[j]=data[key];
         j++;
       }
     }
-    let proc =0;
-    if(proc==1){
-      
-    }
+    
     
     
     
     let i =0;
-    for(var key in data[location.state.pronum]){
-      if(data[location.state.pronum].hasOwnProperty(key)){
-        prokey=Object.keys(data[0]);
+    for(var key in data){
+      if(data.hasOwnProperty(key)){
+        prokey=Object.keys(data);
         i++;
       }
     }
@@ -65,6 +55,7 @@ function Product() {
     var gendiv = prokey.map((pkey,k) => <div>{pkey} : {info[k] }</div>)
   return (
     <div>{gendiv}</div>
+    
   )
 }
 

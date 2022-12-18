@@ -1,13 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
+import {useNavigate} from 'react-router-dom';
 
-function AddBtn({pro}) {
+function AddBtn({pro,item}) {
 
-    
+  const [bnum,setBnum] = useState(-1);
+  const navigate = useNavigate();
 
-    const handleAdd = (e) =>{
-        setBnum((e.target.id).replace(/^\D+/g, ''));
-        setCitem(item);
-        
+    const handleAdd = () =>{
+        setBnum(pro.id);
       }
 
     useEffect(()=> {
@@ -16,6 +16,7 @@ function AddBtn({pro}) {
             {
               state:{
                 bnum,
+                item,
               } 
             }
             )  
@@ -23,7 +24,7 @@ function AddBtn({pro}) {
       })
   return (
     <div className="addb" >
-        <button onClick={handleAdd} id={"b-" + pro.id} >+</button>
+        <button onClick={()=>handleAdd} id={"b-" + pro.id} >+</button>
     </div>
   )
 }

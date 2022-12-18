@@ -1,24 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
+import {useNavigate} from 'react-router-dom';
 
-function ProName({pro}) {
+function ProName({pro,item}) {
 
+    const navigate = useNavigate();
     const [pronum,setPronum] = useState(-1);
     const [prod,setProd] = useState("hi");
 
-    const navPro = (e) =>{
-        setProd(e.target.textContent);
-        setPronum(e.target.id);
+    const navPro = () =>{
+        setProd(pro.name);
+        setPronum(pro.id);
         
       }
-
-      useEffect(()=> {
-        if(bnum != -1){
-          setCname(pro.name); 
-         
-        };
-      },[bnum]);
     
-      
       useEffect(()=> {
         if(!(prod=="hi" && pronum==-1 && item!=null)){
           const url = "/product/"+ prod ;
@@ -33,7 +27,7 @@ function ProName({pro}) {
         }
       },[prod]);
   return (
-    <div className="proname" onClick={ navPro} id={pro.id} >{pro.name}</div>
+    <div className="proname" onClick={()=> navPro} id={pro.id} >{pro.name}</div>
   )
 }
 

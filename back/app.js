@@ -18,6 +18,18 @@ app.get("/todos/:item", async (req, res) => {
     }
 })
 
+app.get("/product/:item/:id", async (req, res)=> {
+    try {
+        const {id} = req.params;
+        const {item} = req.params;
+        const pcPart = await pool.query(`SELECT * FROM ${item} WHERE id=$1 `,
+        [id]);
+        res.json(pcPart.rows[0]);
+    }catch (err) {
+        console.error(err.message);
+    }
+})
+
 app.listen(port, ()=> {
     console.log(`listening on port ${port}`);
 })

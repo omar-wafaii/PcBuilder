@@ -1,9 +1,6 @@
 import React from 'react'
 
-function ProductGenerate({data}) {
-
-  const [pronum,setPronum] = useState(-1);
-  const [prod,setProd] = useState('');
+function ProductGenerate({data,item}) {
 
   
   useEffect(()=> {
