@@ -11,7 +11,7 @@ function ContextProvider({children}) {
     
     
   return (
-   <context.Provider value={{citem, setCitem,cname,setCname,tdp,setTdp,price,setPrice,savedl,setSavedl,savlist,setSavlist,computerParts,setComputerParts}}>
+   <context.Provider value={{citem, setCitem,cname,setCname,computerParts,setComputerParts}}>
       {children}
    </context.Provider>
     

@@ -18,7 +18,7 @@ function Products() {
    
     const getParts =  async () => {
       try {
-        const response = await fetch(`http://localhost:3000/products/${item}`);
+        const response = await fetch(`http://localhost:5000/products/${item}`);
         const jsonData = await response.json();
         setData(jsonData);
       } catch (err) {
@@ -28,6 +28,7 @@ function Products() {
     
     useEffect(()=> {
       getParts();
+      setCitem(item);
     }, []);
    
     let info = [];

@@ -3,8 +3,8 @@ import Body from './Body';
 import './App.css';
 import React from 'react';
 import { Router,Navigate,Routes, Route, Link,BrowserRouter,createBrowserRouter,RouterProvider} from "react-router-dom";
-import Custom from './Custom.js.js';
-import Products from './Products.js.js';
+import Custom from './Custom/Custom.js';
+import Products from './Products/Products.js';
 import Product from './Product.js';
 import ContextProvider from "./Context.js"
 function App() {

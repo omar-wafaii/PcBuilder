@@ -22,7 +22,7 @@
     "dev":"nodemon server.js"
   },
 
-  "proxy":"http://localhost:3000",
+  "proxy":"http://localhost:5000",
   
   "eslintConfig": {
     "extends": [

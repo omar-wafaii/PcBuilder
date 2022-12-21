@@ -3,12 +3,12 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const pool = require("./database");
-const port =3000;
+const port =5000;
 
 app.use(cors());
 app.use(express.json());
 
-app.get("/todos/:item", async (req, res) => {
+app.get("/products/:item", async (req, res) => {
     try {
         const {item} = req.params;
         const pcParts = await pool.query(`SELECT * FROM ${item}`);
