@@ -6,16 +6,8 @@ function ContextProvider({children}) {
     const [citem,setCitem] = useState('');
     const [cname, setCname] = useState("");
     
-    const [computerParts , setComputerParts] = useState({
-      cpu:-1,
-      motherboard:-1,
-      cpuCooler:-1,
-      ram:-1,
-      storage:-1,
-      gpu:-1,
-      powerSupply:-1,
-      case:-1
-    })
+    
+    const [computerParts , setComputerParts] = useState([,,,,,,,])
     
     
   return (

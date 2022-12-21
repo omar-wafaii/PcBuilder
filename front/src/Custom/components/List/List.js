@@ -31,14 +31,14 @@ function List() {
       
       <div className='list'>
         <div className='spec'> <div className='compos'><div className='compol'>Component</div><div className='selec'>Selection</div></div><div className='pri'>Price</div></div>
-        <CopmuterPart name={"Processor"} choose={"choose item"} chosen={false} cpart={computerParts.cpu ? computerParts : false}/>
-        <CopmuterPart name={"Motherboard"} choose={"choose item"} chosen={false} cpart={computerParts.motherboard ? computerParts.motherboard : false}/>
-        <CopmuterPart name={"CPU Cooler"} choose={"choose item"} chosen={false} cpart={computerParts.cpuCooler ? computerParts.cpuCooler : false}/>
-        <CopmuterPart name={"Ram"} choose={"choose item"} chosen={false} cpart={computerParts.ram ? computerParts.ram : false}/>
-        <CopmuterPart name={"Storage"} choose={"choose item"} chosen={false} cpart={computerParts.storage ? computerParts.storage : false}/>
-        <CopmuterPart name={"Graphics Card"} choose={"choose item"} chosen={false} cpart={computerParts.gpu ? computerParts.gpu : false}/>
-        <CopmuterPart name={"Power Supply"} choose={"choose item"} chosen={false} cpart={computerParts.powerSupply ? computerParts.powerSupply : false}/>
-        <CopmuterPart name={"Case"} choose={"choose item"} chosen={false} cpart={computerParts.case ? computerParts.case : false}/>
+        <CopmuterPart name={"Processor"} choose={"choose item"} chosen={false} cpart={computerParts[0] ? computerParts[0] : false}/>
+        <CopmuterPart name={"Motherboard"} choose={"choose item"} chosen={false} cpart={computerParts[1] ? computerParts[1] : false}/>
+        <CopmuterPart name={"CPU Cooler"} choose={"choose item"} chosen={false} cpart={computerParts[2] ? computerParts[2] : false}/>
+        <CopmuterPart name={"Ram"} choose={"choose item"} chosen={false} cpart={computerParts[3] ? computerParts[3] : false}/>
+        <CopmuterPart name={"Storage"} choose={"choose item"} chosen={false} cpart={computerParts[4] ? computerParts[4] : false}/>
+        <CopmuterPart name={"Graphics Card"} choose={"choose item"} chosen={false} cpart={computerParts[5] ? computerParts[5] : false}/>
+        <CopmuterPart name={"Power Supply"} choose={"choose item"} chosen={false} cpart={computerParts[6] ? computerParts[6] : false}/>
+        <CopmuterPart name={"Case"} choose={"choose item"} chosen={false} cpart={computerParts[7] ? computerParts[7] : false}/>
         
       </div>
     
