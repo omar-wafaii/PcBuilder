@@ -63,7 +63,8 @@ function Products() {
       <div className='pheader'><h2>choose a {item}</h2></div>
       <div className="procon">
       <ProductSpec spec = {info}/>
-      <ProductGenerate data ={data} item={citem}/>
+      { (data !=false) &&
+      <ProductGenerate data ={data} item={citem}/>}
 
      
      

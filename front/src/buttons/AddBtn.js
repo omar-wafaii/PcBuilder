@@ -5,13 +5,15 @@ function AddBtn({pro,item}) {
 
   const [bnum,setBnum] = useState(-1);
   const navigate = useNavigate();
-
+  console.log("addbtn");
     const handleAdd = () =>{
         setBnum(pro.id);
+        console.log("added");
       }
 
     useEffect(()=> {
         if(!(bnum==-1 )){
+            console.log("nav");
             navigate("/list",
             {
               state:{
@@ -24,7 +26,7 @@ function AddBtn({pro,item}) {
       })
   return (
     <div className="addb" >
-        <button onClick={()=>handleAdd} id={"b-" + bnum} >+</button>
+        <button onClick={()=>handleAdd} id={bnum} >+</button>
     </div>
   )
 }
