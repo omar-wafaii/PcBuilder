@@ -21,6 +21,7 @@ function List() {
 
    useEffect(()=>{
      localStorage.setItem("computerparts" , JSON.stringify(computerParts))
+     if(computerParts !=false){console.log(computerParts);}
 
    },[])
 

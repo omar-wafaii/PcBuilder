@@ -5,11 +5,10 @@ import AddBtn from './buttons/AddBtn';
 function Product() {
 
   const location = useLocation();
-  const [pronum,setPronum] = useState(-1);
-  const [item,setItem] = useState("");
+  const [pronum,setPronum] = useState(location.state.pronum);
+  const [item,setItem] = useState(location.state.item);
   const [data, setData] = useState([]);
-  setPronum(location.state.pronum);
-  setItem(location.state.item);
+  
      
     const getPcPart = async () => {
       try {

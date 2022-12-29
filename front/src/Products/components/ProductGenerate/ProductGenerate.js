@@ -9,9 +9,7 @@ function ProductGenerate({data,item}) {
   
     
       
-      console.log("hi");
-      console.log(item);
-      console.log(data);
+     
       
     
     switch(item){

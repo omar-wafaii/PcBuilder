@@ -5,7 +5,7 @@ import { context } from '../../../../Context.js';
 
 function CopmuterPart({name, index,cpart ,item}) {
   
-  const {citem, setCitem,computerParts,setComputerParts,cname,setCname} = useContext(context);
+  const {citem, setCitem,computerParts,setComputerParts} = useContext(context);
   const [data,setData] = useState([])
 
   const getPart =  async () => {
@@ -20,13 +20,18 @@ function CopmuterPart({name, index,cpart ,item}) {
   
   useEffect(()=> {
     if(citem==item){
+      getPart();
+      if(data){
       let items=  JSON.parse(localStorage.getItem("computerparts"))
       setComputerParts(items);
       let lpart = computerParts;
       lpart[index] = cpart;
       setComputerParts(lpart);
       localStorage.setItem("computerparts" , JSON.stringify(computerParts));
-      getPart();
+      console.log("hi");
+      console.log(data);
+      }
+     
       
     }
   },[])
@@ -34,7 +39,7 @@ function CopmuterPart({name, index,cpart ,item}) {
   return (
     <div className="compo" ><div className='pname'> {name}</div>  
       
-        {cpart ? <div className='savcomp' >{data[0]}  </div> :
+        {data && cpart ? <div className='savcomp' >{data[0]}  </div> :
           <Link to ={`/products/${item}`}><button className="linkb" >choose a {name}</button></Link>} 
     </div>
   )

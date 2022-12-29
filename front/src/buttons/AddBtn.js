@@ -26,7 +26,7 @@ function AddBtn({pro,item}) {
       })
   return (
     <div className="addb" >
-        <button onClick={()=>handleAdd} id={bnum} >+</button>
+        <button onClick={handleAdd} id={bnum} >+</button>
     </div>
   )
 }

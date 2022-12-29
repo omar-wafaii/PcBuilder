@@ -27,7 +27,7 @@ function ProName({pro,item}) {
         }
       },[prod]);
   return (
-    <div className="proname" onClick={()=> navPro} id={pro.id} >{pro.name}</div>
+    <div className="proname" onClick={navPro} id={pro.id} >{pro.name}</div>
   )
 }
 
