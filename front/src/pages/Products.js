@@ -1,8 +1,8 @@
 import React,{ useState, useEffect, useContext } from 'react';
 import { useParams,Link,useNavigate, useLocation } from 'react-router-dom';
-import ProductGenerate from './components/ProductGenerate/ProductGenerate.js';
-import ProductSpec from './components/ProductSpec.js';
-import { context } from '../Context.js';
+import ProductGenerate from '../components/products/ProductGenerate.js';
+import ProductSpec from '../components/products/ProductSpec.js';
+import { context } from '../components/context/Context.js';
 
 
 

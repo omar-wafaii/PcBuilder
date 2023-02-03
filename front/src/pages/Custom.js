@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
-import List from './components/List/List.js';
-import Compatible from './components/Compatible.js';
+import List from '../components/custom/List.js';
+import Compatible from '../components/custom/Compatible.js';
 
 function Custom() {
   const [watt, setWatt] = useState(0);

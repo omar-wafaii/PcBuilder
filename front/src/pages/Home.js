@@ -1,11 +1,11 @@
 import React from 'react'
-import custompc from './imgs/custompc.jpeg';
-import prepc from './imgs/prepc.jpeg';
-import laptop from './imgs/laptop.jpeg';
+import custompc from '../imgs/custompc.jpeg';
+import prepc from '../imgs/prepc.jpeg';
+import laptop from '../imgs/laptop.jpeg';
 import { useNavigate } from 'react-router-dom';
 
 
-export default function Body() {
+export default function Home() {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate('List');

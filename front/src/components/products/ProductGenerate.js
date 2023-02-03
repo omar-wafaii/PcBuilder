@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from 'react'
-import AddBtn from '../../../buttons/AddBtn';
-import ProName from './components/ProName';
+import AddBtn from '../buttons/AddBtn.js';
+import ProName from './ProName';
 
 function ProductGenerate({data,item}) {
 

@@ -1,6 +1,6 @@
 import React,{useEffect, useState,Fragment} from 'react'
 import { useParams,Link,useLocation } from 'react-router-dom';
-import AddBtn from './buttons/AddBtn';
+import AddBtn from '../components/buttons/AddBtn.js';
 
 function Product() {
 
