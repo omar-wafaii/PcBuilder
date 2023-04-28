@@ -166,3 +166,17 @@ img {
   background-color: cyan;
   border:0px;
 }
+.savcomp {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+ 
+}
+.cprice {
+  width:30%;
+  margin-left: 33%;
+  
+}
+.cname {
+  width:40%;
+}

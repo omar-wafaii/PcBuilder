@@ -5,7 +5,7 @@ export const context = createContext();
 function ContextProvider({children}) {
     const [citem,setCitem] = useState('');
     const [cname, setCname] = useState("");
-    const [cpart,setCpart] = useState([]);
+    const [cpart,setCpart] = useState();
     const [bnum,setBnum] = useState(-1);
     
     
