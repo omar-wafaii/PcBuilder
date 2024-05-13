@@ -7,6 +7,7 @@ import GenBtn from '../buttons/genBtn.js';
 function CopmuterPart({name,item,cpart}) {
   
   const {citem,setCitem,computerParts,setComputerParts,setCpart} = useContext(context);
+
   const [data,setData] = useState(false);
   const [index,setIndex] = useState(-1);
   useEffect(()=>{
@@ -18,9 +19,7 @@ function CopmuterPart({name,item,cpart}) {
     }
   };
   },[cpart]);
-if(data){
-  console.log(data);
-}
+
   function deletec(data){
     var temp = cpart;
     for(let i=0;i<cpart.length;i++){

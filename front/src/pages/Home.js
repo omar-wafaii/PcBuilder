@@ -1,5 +1,5 @@
 import React from 'react'
-import custompc from '../imgs/custompc.jpeg';
+import custompc from '../imgs/background.webp';
 import prepc from '../imgs/prepc.jpeg';
 import laptop from '../imgs/laptop.jpeg';
 import { useNavigate } from 'react-router-dom';
@@ -12,10 +12,8 @@ export default function Home() {
   }
   return (
     <div className='body'>
-      <div className='buildop'>
-        <div className='op' onClick={handleClick}><div className='opimg'><img src={custompc}></img></div><div className="optext">Build your own custom pc !!!</div></div>
-        <div className='op'><div className='opimg'><img src={prepc}></img></div><div className="optext">choose from our prebuilt collection !!!</div></div>
-        <div className='op'><div className='opimg'><img src={laptop}></img></div><div className="optext">you can find the laptop that meets your needs here !!!</div></div>
+      <div className='buildop'><img src={custompc}></img>
+        <button className='op' onClick={handleClick}><p>Build your computer</p></button>
       </div>
     </div>
   )

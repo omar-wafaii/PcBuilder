@@ -52,11 +52,11 @@ function Product() {
       }
     }
     
-    var gendiv = prokey.map((pkey,k) => <div>{pkey} : {info[k] }</div>)
+    var gendiv = prokey.map((pkey,k) => <div className='proval'>{pkey} : {info[k] }</div>)
   return (
     <Fragment>
-      <div>{gendiv}</div>
-      <AddBtn pro ={data} item={item} />
+      <div className='product'><div>{gendiv}</div>
+      <AddBtn pro ={data} item={item} /></div>
     </Fragment>
   )
 }
